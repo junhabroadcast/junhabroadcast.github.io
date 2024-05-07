@@ -15,16 +15,31 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+        }
+        .header img {
+            height: 100px; /* 로고의 크기를 조정합니다 */
+        }
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 0 auto;
-            display: none; /* 초기에는 테이블을 숨깁니다 */
+            margin: 20px auto; /* 상하 여백 추가 */
+            display: none; /* 초기에는 모든 테이블을 숨깁니다 */
         }
         th, td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
+            width: 25%; /* 각 열의 너비를 테이블 너비의 1/4로 설정 */
         }
         th {
             background-color: #f2f2f2;
@@ -48,12 +63,146 @@
     </style>
 </head>
 <body>
-    <h1>한 아프리카 정상회담 방송기술 관련 연락처 모음</h1>
+    <div class="header">
+        <img src="C:\Users\KBS\OneDrive\중계기술국\24.06\06.03-05 한 아프리카 정상회담\kbs.png" alt="KBS Logo"> <!-- 로고 이미지 경로를 수정하세요 -->
+        <div class="title">
+            <h1>한 아프리카 정상회담 방송기술 관련 연락처 모음</h1>
+        </div>
+    </div>
     <div>
+        <button class="button" onclick="showContacts('전체 보기')">전체 보기</button>
         <button class="button" onclick="showContacts('인터컴')">인터컴</button>
         <button class="button" onclick="showContacts('외교부')">외교부</button>
         <button class="button" onclick="showContacts('문체부')">문체부</button>
+        <button class="button" onclick="showContacts('디지털큐브')">디지털큐브</button>
+        <button class="button" onclick="showContacts('KT')">KT</button>
+        <button class="button" onclick="showContacts('킨텍스')">킨텍스</button>
+        <button class="button" onclick="showContacts('빠삐용')">빠삐용</button>
     </div>
+    <!-- 여기에 각 기관에 대한 테이블 추가 -->
+    <table id="전체 보기">
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>인터컴</td>
+            <td>내부 시설 구축 총괄</td>
+            <td>김지현 팀장/이사</td>
+            <td><a href="tel:010-2359-8849">010-2359-8849</a></td>
+        </tr>
+        <tr>
+            <td>인터컴</td>
+            <td>킨텍스 6,7홀 미디어구축 담당</td>
+            <td>김경주 부장</td>
+            <td><a href="tel:010-3340-9360">010-3340-9360</a></td>
+        </tr>
+        <tr>
+            <td>인터컴</td>
+            <td>킨텍스 10홀 미디어구축 담당</td>
+            <td>이정우 차장</td>
+            <td><a href="tel:010-5054-8600">010-5054-8600</a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>외교부 정상회의 준비기획단</td>
+            <td>동선 및 자료요청</td>
+            <td>이준일 행정관</td>
+            <td><a href="tel:010-4480-2627"><ahref="tel:02-2195-2332">010-4480-2627 / 02-2195-2332</a></a></td>
+        </tr>
+        <tr>
+            <td>외교부 정상회의 준비기획단</td>
+            <td></td>
+            <td>배태민 사무관</td>
+            <td><a href="tel:010-8457-4526"><ahref="tel:02-2195-2315">010-8457-4526 / 02-2195-2315</a></a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>문체부 해외문화홍보원</td>
+            <td>외신분석팀 팀장</td>
+            <td>최강 서기관</td>
+            <td><a href="tel:010-6224-0922"><ahref="tel:02-731-1505">010-6224-0922 / 02-731-1505</a></a></td>
+        </tr>
+        <tr>
+            <td>문체부 국제문화홍보정책실</td>
+            <td>해외뉴스분석팀</td>
+            <td>김영민 사무관</td>
+            <td><a href="tel:010-3077-6111"><ahref="tel:02-731-1593">010-3077-6111 / 02-731-1593</a></a></td>
+        </tr>
+        <tr>
+            <td>문체부 해외홍보정책관</td>
+            <td>해외미디어협력관</td>
+            <td>정현욱 과장</td>
+            <td><a href="tel:010-2994-0771"><ahref="tel:044-203-3391">010-2994-0771 / 044-203-3391</a></a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>디지털큐브</td>
+            <td>외주중계차 운영</td>
+            <td>김성원 대표이사</td>
+            <td><a href="tel:010-8963-8443">010-8963-8443</a></td>
+        </tr>
+        <tr>
+            <td>디지털큐브</td>
+            <td>미디어센터 디렉팅</td>
+            <td>임승준 PD</td>
+            <td><a href="tel:010-8824-9972">010-8824-9972</a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>KT</td>
+            <td>방송기술팀</td>
+            <td>한의석 차장</td>
+            <td><a href="tel:010-9777-6565">010-9777-6565</a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>킨텍스</td>
+            <td>킨텍스 시설관리</td>
+            <td>강유신 팀장</td>
+            <td><a href="tel:010-9777-6565">010-9777-6565</a></td>
+        </tr>
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>빠삐용</td>
+            <td>UNI제작</td>
+            <td>최종훈 대표</td>
+            <td><a href="tel:010-6396-1713">010-6396-1713</a></td>
+        </tr>
+
+
     <table id="인터컴">
         <tr>
             <th>기관</th>
@@ -88,29 +237,120 @@
             <th>연락처</th>
         </tr>
         <tr>
-            <td>외교부 한-아프리카 정상회의 준비기획단</td>
+            <td>외교부 정상회의 준비기획단</td>
             <td>동선 및 자료요청</td>
             <td>이준일 행정관</td>
             <td><a href="tel:010-4480-2627"><ahref="tel:02-2195-2332">010-4480-2627 / 02-2195-2332</a></a></td>
         </tr>
         <tr>
-            <td>외교부 한-아프리카 정상회의 준비기획단</td>
+            <td>외교부 정상회의 준비기획단</td>
             <td></td>
             <td>배태민 사무관</td>
             <td><a href="tel:010-8457-4526"><ahref="tel:02-2195-2315">010-8457-4526 / 02-2195-2315</a></a></td>
         </tr>
     </table>
     <table id="문체부">
-        <!-- 문체부 관련 연락처 -->
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>문체부 해외문화홍보원</td>
+            <td>외신분석팀 팀장</td>
+            <td>최강 서기관</td>
+            <td><a href="tel:010-6224-0922"><ahref="tel:02-731-1505">010-6224-0922 / 02-731-1505</a></a></td>
+        </tr>
+        <tr>
+            <td>문체부 국제문화홍보정책실</td>
+            <td>해외뉴스분석팀</td>
+            <td>김영민 사무관</td>
+            <td><a href="tel:010-3077-6111"><ahref="tel:02-731-1593">010-3077-6111 / 02-731-1593</a></a></td>
+        </tr>
+        <tr>
+            <td>문체부 해외홍보정책관</td>
+            <td>해외미디어협력관</td>
+            <td>정현욱 과장</td>
+            <td><a href="tel:010-2994-0771"><ahref="tel:044-203-3391">010-2994-0771 / 044-203-3391</a></a></td>
+        </tr>
     </table>
+    <table id="디지털큐브">
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>디지털큐브</td>
+            <td>외주중계차 운영</td>
+            <td>김성원 대표이사</td>
+            <td><a href="tel:010-8963-8443">010-8963-8443</a></td>
+        </tr>
+        <tr>
+            <td>디지털큐브</td>
+            <td>미디어센터 디렉팅</td>
+            <td>임승준 PD</td>
+            <td><a href="tel:010-8824-9972">010-8824-9972</a></td>
+        </tr>
+    <table id="KT">
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>KT</td>
+            <td>방송기술팀</td>
+            <td>한의석 차장</td>
+            <td><a href="tel:010-9777-6565">010-9777-6565</a></td>
+        </tr>
+    <table id="킨텍스">
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>킨텍스</td>
+            <td>킨텍스 시설관리</td>
+            <td>강유신 팀장</td>
+            <td><a href="tel:010-9777-6565">010-9777-6565</a></td>
+        </tr>
+    <table id="빠삐용">
+        <tr>
+            <th>기관</th>
+            <th>담당</th>
+            <th>담당자 / 직위</th>
+            <th>연락처</th>
+        </tr>
+        <tr>
+            <td>빠삐용</td>
+            <td>UNI제작</td>
+            <td>최종훈 대표</td>
+            <td><a href="tel:010-6396-1713">010-6396-1713</a></td>
+        </tr>
+
+    </table>
+
     <script>
+        // 페이지 로드 시 "전체 보기" 탭 활성화
+        window.onload = function() {
+            showContacts('전체 보기');
+        };
+
         function showContacts(department) {
             const tables = document.querySelectorAll('table');
             tables.forEach(table => {
-                if (table.id === department) {
-                    table.style.display = 'block';
+                if (department === '전체 보기' && table.id === '전체 보기') {
+                    table.style.display = 'block'; // "전체 보기" 탭만 표시
+                } else if (table.id === department) {
+                    table.style.display = 'block'; // 선택된 부서의 테이블 표시
                 } else {
-                    table.style.display = 'none';
+                    table.style.display = 'none'; // 그 외의 테이블 숨김
                 }
             });
         }
